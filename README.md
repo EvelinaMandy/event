@@ -1,0 +1,518 @@
+# event
+Nama: Evelina Mandy 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeDay - Ngoding Virtual Sambil Ngopi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'fun-purple': '#7e22ce',
+                        'fun-pink': '#ec4899',
+                        'fun-blue': '#3b82f6',
+                        'fun-green': '#10b981',
+                        'fun-yellow': '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        .blob {
+            position: absolute;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        .speaker-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Background Blobs -->
+    <div class="blob blob-1" style="top: 10%; left: 5%; width: 300px; height: 300px; background: radial-gradient(circle, #7e22ce 0%, transparent 70%);"></div>
+    <div class="blob blob-2" style="top: 60%; right: 10%; width: 400px; height: 400px; background: radial-gradient(circle, #ec4899 0%, transparent 70%);"></div>
+    <div class="blob blob-3" style="bottom: 10%; left: 20%; width: 250px; height: 250px; background: radial-gradient(circle, #3b82f6 0%, transparent 70%);"></div>
+    <!-- Header -->
+    <header class="py-6 px-4 sticky top-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-r from-fun-purple to-fun-pink flex items-center justify-center text-white font-bold text-xl">CD</div>
+                <h1 class="text-2xl font-bold bg-gradient-to-r from-fun-purple to-fun-pink bg-clip-text text-transparent">Code<span class="text-fun-blue">Day</span></h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="text-gray-700 hover:text-fun-purple transition font-medium">Home</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-fun-purple transition font-medium">Events</a></li>
+                    <li><a href="#" class="px-4 py-2 bg-gradient-to-r from-fun-purple to-fun-pink text-white rounded-full hover:shadow-lg transition">Daftar Sekarang</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="py-16 px-4 relative overflow-hidden">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 relative z-10">
+                <div class="inline-block px-3 py-1 rounded-full bg-fun-yellow/10 text-fun-yellow font-medium mb-4">
+                    <i class="fas fa-mug-hot mr-2"></i>Event Seru Sambil Ngopi
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4 leading-tight">CodeDay - 
+                    <span class="bg-gradient-to-r from-fun-purple to-fun-pink bg-clip-text text-transparent">Ngoding Bareng Para Dev</span></h2>
+                <p class="text-xl text-gray-600 mb-6 max-w-lg">Ngoding santai, diskusi teknologi terbaru, dan networking dengan para developer lain. </p>
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <div class="flex items-center bg-white px-4 py-2 rounded-full shadow-sm">
+                        <div class="w-8 h-8 rounded-full bg-fun-purple/10 text-fun-purple flex items-center justify-center mr-2">
+                            <i class="fas fa-calendar-day"></i>
+                        </div>
+                        <span class="text-gray-700">Jumat, 30 Mei 2025 </span>
+                    </div>
+                    <div class="flex items-center bg-white px-4 py-2 rounded-full shadow-sm">
+                        <div class="w-8 h-8 rounded-full bg-fun-blue/10 text-fun-blue flex items-center justify-center mr-2">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <span class="text-gray-700">19.00 - Selesai</span>
+                    </div>
+                    <div class="flex items-center bg-white px-4 py-2 rounded-full shadow-sm">
+                        <div class="w-8 h-8 rounded-full bg-fun-green/10 text-fun-green flex items-center justify-center mr-2">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <span class="text-gray-700">Zoom & Discord</span>
+                    </div>
+                </div>  
+                <div class="flex flex-wrap gap-4">
+                    <a href="#daftar" class="px-6 py-3 bg-gradient-to-r from-fun-purple to-fun-pink text-white rounded-full font-medium hover:shadow-lg transition transform hover:scale-105">
+                        Daftar Gratis <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#pembicara" class="px-6 py-3 bg-white text-gray-800 rounded-full font-medium hover:shadow-md transition border border-gray-200">
+                        Lihat Pembicara <i class="fas fa-users ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Ngopi Koding" 
+                         class="rounded-2xl shadow-xl w-full h-auto max-h-96 object-cover">
+                    <div class="absolute -bottom-4 -right-4 bg-white px-4 py-2 rounded-full shadow-md border border-gray-100">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-fun-yellow text-white flex items-center justify-center mr-2">
+                                <i class="fas fa-mug-hot"></i>
+                            </div>
+                            <span class="font-medium">Free Coffee Voucher!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pembicara Section -->
+    <section id="pembicara" class="py-16 px-4 bg-gradient-to-br from-fun-purple/5 to-fun-blue/5">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Temu Para <span class="bg-gradient-to-r from-fun-purple to-fun-pink bg-clip-text text-transparent">Expert Santai</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Pembicara kita bukan cuma jago ngoding, tapi juga asik buat diajak ngobrol santai!</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pembicara 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition speaker-card">
+                    <div class="flex justify-center mb-4 relative">
+                        <img src="https://blog-cdn.kitalulus.com/blog/wp-content/uploads/2024/03/05211056/6417e605da7de724ba9c598a_Vina.webp" 
+                             alt="Sarah Wijaya" 
+                             class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg">
+                        <div class="absolute bottom-0 right-6 bg-fun-purple text-white px-2 py-1 rounded-full text-xs font-medium">
+                            <i class="fas fa-star mr-1"></i> AI Specialist
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Vina Muliana</h3>
+                    <p class="text-fun-purple text-center mb-4">Lead AI @TechGeniusID</p>
+                    <p class="text-gray-600 text-center mb-4">"Bikin AI itu kaya masak mie instan, tapi pakai bumbu PhD."</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="w-8 h-8 rounded-full bg-blue-100 text-blue-500 flex items-center justify-center hover:bg-blue-200 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-100 text-gray-800 flex items-center justify-center hover:bg-gray-200 transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Pembicara 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition speaker-card">
+                    <div class="flex justify-center mb-4 relative">
+                        <img src="https://www.gramedia.com/blog/content/images/2024/05/6191a30925f6b.png" 
+                             alt="Budi Setiawan" 
+                             class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg">
+                        <div class="absolute bottom-0 right-6 bg-fun-blue text-white px-2 py-1 rounded-full text-xs font-medium">
+                            <i class="fas fa-rocket mr-1"></i> Startup Founder
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Jerome Polin</h3>
+                    <p class="text-fun-blue text-center mb-4">CEO @StartupLokal</p>
+                    <p class="text-gray-600 text-center mb-4">"Dari nol ke unicorn? Gak semudah itu, tapi bisa dimulai dari ngopi dulu."</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="w-8 h-8 rounded-full bg-blue-100 text-blue-500 flex items-center justify-center hover:bg-blue-200 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-100 text-gray-800 flex items-center justify-center hover:bg-gray-200 transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>  
+                <!-- Pembicara 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition speaker-card">
+                    <div class="flex justify-center mb-4 relative">
+                        <img src="https://prod-icecore-s3stack-bucketarticle3e3dae4c-vf0wr3lj0kzr.s3.ap-southeast-1.amazonaws.com/20230612_66_2d4c424c_38c4_4559_90b7_c5084857b83c_4e0683ba1c.webp" 
+                             alt="Dewi Kartini" 
+                             class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg">
+                        <div class="absolute bottom-0 right-6 bg-fun-pink text-white px-2 py-1 rounded-full text-xs font-medium">
+                            <i class="fas fa-paint-brush mr-1"></i> UX Designer
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Dian Sastro</h3>
+                    <p class="text-fun-pink text-center mb-4">UX Lead @DigitalCreative</p>
+                    <p class="text-gray-600 text-center mb-4">"Design itu bukan cuma cantik, tapi juga harus nyaman kayak kaos favorit lo."</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="w-8 h-8 rounded-full bg-blue-100 text-blue-500 flex items-center justify-center hover:bg-blue-200 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-100 text-gray-800 flex items-center justify-center hover:bg-gray-200 transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Agenda Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Agenda <span class="bg-gradient-to-r from-fun-blue to-fun-green bg-clip-text text-transparent">Nongkrong</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Gak bakal bosen, banyak aktivitas seru yang kita siapin!</p>
+            </div>    
+            <div class="space-y-8">
+                <!-- Item 1 -->
+                <div class="flex flex-col md:flex-row gap-6 p-6 bg-gradient-to-r from-fun-purple/5 to-fun-pink/5 rounded-2xl border border-fun-purple/10">
+                    <div class="md:w-1/4">
+                        <div class="bg-fun-purple text-white w-16 h-16 rounded-xl flex flex-col items-center justify-center font-bold">
+                            <span class="text-2xl">19:00</span>
+                        </div>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Ice Breaking & Perkenalan</h3>
+                        <p class="text-gray-600">Buka kamera, siapin kopi, dan kenalan dengan peserta lain. Jangan malu-malu!</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="flex flex-col md:flex-row gap-6 p-6 bg-gradient-to-r from-fun-blue/5 to-fun-green/5 rounded-2xl border border-fun-blue/10">
+                    <div class="md:w-1/4">
+                        <div class="bg-fun-blue text-white w-16 h-16 rounded-xl flex flex-col items-center justify-center font-bold">
+                            <span class="text-2xl">19:30</span>
+                        </div>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sharing Session: AI untuk Mahasiswa</h3>
+                        <p class="text-gray-600">Raras bakal bagi-bagi tips praktis pake AI buat ngerjain tugas (yang etis tentunya).</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="flex flex-col md:flex-row gap-6 p-6 bg-gradient-to-r from-fun-yellow/5 to-fun-pink/5 rounded-2xl border border-fun-yellow/10">
+                    <div class="md:w-1/4">
+                        <div class="bg-fun-yellow text-white w-16 h-16 rounded-xl flex flex-col items-center justify-center font-bold">
+                            <span class="text-2xl">20:15</span>
+                        </div>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Diskusi Bebas & Q&A</h3>
+                        <p class="text-gray-600">Nanya apa aja ke pembicara, atau diskusiin project lo yang lagi stuck.</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="flex flex-col md:flex-row gap-6 p-6 bg-gradient-to-r from-fun-green/5 to-fun-blue/5 rounded-2xl border border-fun-green/10">
+                    <div class="md:w-1/4">
+                        <div class="bg-fun-green text-white w-16 h-16 rounded-xl flex flex-col items-center justify-center font-bold">
+                            <span class="text-2xl">21:00</span>
+                        </div>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Networking & Tutup</h3>
+                        <p class="text-gray-600">Lanjut obrolan di Discord, siapa tau ketemu project partner atau temen kolaborasi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimoni -->
+    <section class="py-16 px-4 bg-gradient-to-br from-fun-blue/5 to-fun-purple/5">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Kata <span class="bg-gradient-to-r from-fun-pink to-fun-yellow bg-clip-text text-transparent">Mereka</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Apa kata peserta event sebelumnya?</p>
+            </div>   
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testi 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Andi" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Kevin Sanjaya</h4>
+                            <p class="text-sm text-gray-500">Mahasiswa Informatika</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Awalnya cuma iseng daftar, eh ternyata seru banget! Pembicaranya asik dan materinya aplikatif banget buat mahasiswa."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <!-- Testi 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Dina" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Anastasia Audy</h4>
+                            <p class="text-sm text-gray-500">Mahasiswa Sistem Informasi</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Gak kaku kayak webinar formal, bener-bener santai tapi isinya daging semua. Sekarang jadi rutin ikut tiap minggu!"</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <!-- Testi 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Rizky" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Hartono Budiman</h4>
+                            <p class="text-sm text-gray-500">Mahasiswa Teknik Komputer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Dari sini gw dapet temen buat bikin startup kecil-kecilan. Pembicaranya humble banget mau jawab pertanyaan receh."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Form Pendaftaran -->
+    <section id="daftar" class="py-16 px-4 bg-gradient-to-br from-fun-purple to-fun-pink text-white">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-4">Yuk Daftar, Gratis!</h2>
+                <p class="text-purple-100 opacity-90">Isi form ini dan kita kirimin link Zoom + reminder ke email lo. Gampang banget!</p>
+            </div>
+            <form id="registrationForm" class="bg-white rounded-2xl shadow-2xl p-8 text-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Nama Lengkap <span class="text-red-500">*</span></label>
+                        <input type="text" id="name" name="name" required 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-fun-purple focus:border-fun-purple placeholder-gray-400">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Email <span class="text-red-500">*</span></label>
+                        <input type="email" id="email" name="email" required 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-fun-purple focus:border-fun-purple placeholder-gray-400">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="university" class="block text-gray-700 font-medium mb-2">Kampus/Komunitas</label>
+                        <input type="text" id="university" name="university" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-fun-purple focus:border-fun-purple placeholder-gray-400" placeholder="Kalau gak kuliah, tulis komunitas/freelance">
+                    </div>
+                    <div>
+                        <label for="interest" class="block text-gray-700 font-medium mb-2">Minat Utama</label>
+                        <select id="interest" name="interest" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-fun-purple focus:border-fun-purple">
+                            <option value="">Pilih yang paling deket</option>
+                            <option value="web-dev">Web Development</option>
+                            <option value="mobile-dev">Mobile Development</option>
+                            <option value="ai-ml">AI/ML</option>
+                            <option value="ui-ux">UI/UX Design</option>
+                            <option value="data-science">Data Science</option>
+                            <option value="other">Lainnya</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">Pertanyaan buat pembicara (opsional)</label>
+                    <textarea name="questions" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-fun-purple focus:border-fun-purple placeholder-gray-400" placeholder="Apa aja yang pengen lo tanyain ke pembicara..."></textarea>
+                </div>
+                <div class="flex items-start mb-6">
+                    <input type="checkbox" id="consent" name="consent" required class="mt-1 mr-2 rounded focus:ring-fun-purple text-fun-purple">
+                    <label for="consent" class="text-gray-700">Saya setuju dapat email reminder dan info event selanjutnya. Tenang, kita gak bakal spam!</label>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-fun-purple to-fun-pink text-white font-bold py-4 px-6 rounded-xl transition duration-300 transform hover:scale-105 hover:shadow-lg">
+                    <i class="fas fa-paper-plane mr-2"></i> Daftar Sekarang!
+                </button>  
+                <p class="text-center text-gray-500 text-sm mt-4">Gak perlu bayar, cukup bawa semangat!</p>
+            </form>
+        </div>
+    </section>
+    <!-- FAQ -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Pertanyaan <span class="bg-gradient-to-r from-fun-blue to-fun-green bg-clip-text text-transparent">Yang Sering Ditanyain</span></h2>
+                <p class="text-lg text-gray-600">Bingung? Coba cek dulu jawaban di bawah ini</p>
+            </div>
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition">
+                        <h3 class="font-bold text-gray-800">Ini beneran gratis? Ada syarat khusus?</h3>
+                        <i class="fas fa-chevron-down text-fun-purple transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Beneran gratis 100%! Syaratnya cuma satu: punya semangat belajar dan kopi/minuman favorit buat nemenin. Kita gak minta bayaran atau data kartu kredit kok.</p>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition">
+                        <h3 class="font-bold text-gray-800">Kalo gak punya background IT, boleh ikut?</h3>
+                        <i class="fas fa-chevron-down text-fun-purple transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Boleh banget! Kita selalu usahain materi bisa dicerna semua orang. Bahkan beberapa peserta paling aktif kita justru dari non-IT yang penasaran sama dunia tech.</p>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition">
+                        <h3 class="font-bold text-gray-800">Wajib buka kamera gak sih?</h3>
+                        <i class="fas fa-chevron-down text-fun-purple transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Nggak wajib, tapi kita sangat menyarankan buka kamera terutama saat sesi perkenalan dan diskusi biar lebih interaktif. Tapi kalo lagi bad hair day, gak masalah kok!</p>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition">
+                        <h3 class="font-bold text-gray-800">Bakal dapet materi atau rekamannya gak?</h3>
+                        <i class="fas fa-chevron-down text-fun-purple transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Iya! Kita bakal kirim slide dan link rekaman ke semua peserta yang udah daftar. Jadi kalo ketiduran atau ada urusan mendadak, tetep bisa nonton nanti.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="py-12 px-4 bg-gray-900 text-white">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start mb-8">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-fun-purple to-fun-pink flex items-center justify-center text-white font-bold text-xl">CD</div>
+                        <h2 class="text-2xl font-bold bg-gradient-to-r from-fun-purple to-fun-pink bg-clip-text text-transparent">Code<span class="text-fun-blue">Day</span></h2>
+                    </div>
+                    <p class="text-gray-400 max-w-xs">Tempat nongkrong virtual paling asik buat mahasiswa yang kepo sama teknologi.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Event</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">CodeDay</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Hackathon</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Workshop</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Komunitas</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Discord</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Telegram</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Instagram</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Tentang</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Tim Kami</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Partner</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Kontak</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 CodeDay. Dibuat dengan <i class="fas fa-heart text-red-400"></i> untuk mahasiswa.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript -->
+    <script>
+        // Form Submission
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Ambil data form
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            // Simulasi pengiriman email
+            console.log('Data pendaftaran:', data);
+            // Tampilkan pesan sukses
+            alert(`Hai ${data.name}! Pendaftaran berhasil. Link Zoom dan reminder sudah dikirim ke ${data.email}. Jangan lupa siapin kopi ya!`);
+            // Reset form
+            this.reset();
+            // Dalam implementasi nyata, gunakan EmailJS atau backend service lainnya
+            /* Contoh dengan EmailJS:
+            emailjs.send('service_id', 'template_id', data)
+                .then(() => {
+                    alert('Pendaftaran berhasil! Cek email kamu untuk detail acara.');
+                }, (err) => {
+                    alert('Oops! Ada error. Coba lagi ya.');
+                });
+            */
+        });
+        // FAQ Toggle
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');    
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+</body>
+</html>
