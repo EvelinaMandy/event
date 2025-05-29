@@ -348,62 +348,31 @@
         <div class="container mx-auto max-w-4xl">
             <div class="text-center mb-10">
                 <h2 class="text-3xl font-bold mb-4">Yuk Daftar, Gratis!</h2>
-                <p class="text-purple-100 opacity-90">Isi form ini dan kita kirimin link Zoom + reminder ke email lo. Gampang banget!</p>
+                <p class="text-purple-100 opacity-90">Isi form Google berikut dan kita kirimin link Zoom + reminder ke email lo. Gampang banget!</p>
             </div>
             
-            <form id="registrationForm" class="bg-white rounded-2xl shadow-2xl p-8 text-gray-800">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label for="name" class="block text-gray-700 font-medium mb-2">Nama Lengkap <span class="text-red-500">*</span></label>
-                        <input type="text" id="name" name="name" required 
-                               class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-fun-purple focus:border-fun-purple placeholder-gray-400">
+            <div class="bg-white rounded-2xl shadow-2xl p-8 text-gray-800">
+                <div class="flex flex-col items-center justify-center">
+                    <div class="mb-6 text-center">
+                        <i class="fas fa-external-link-alt text-4xl text-fun-purple mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Form Pendaftaran CodeDay</h3>
+                        <p class="text-gray-600">Klik tombol di bawah untuk mengisi form pendaftaran di Google Forms</p>
                     </div>
-                    <div>
-                        <label for="email" class="block text-gray-700 font-medium mb-2">Email <span class="text-red-500">*</span></label>
-                        <input type="email" id="email" name="email" required 
-                               class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-fun-purple focus:border-fun-purple placeholder-gray-400">
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label for="university" class="block text-gray-700 font-medium mb-2">Kampus/Komunitas</label>
-                        <input type="text" id="university" name="university" 
-                               class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-fun-purple focus:border-fun-purple placeholder-gray-400" placeholder="Kalau gak kuliah, tulis komunitas/freelance">
-                    </div>
-                    <div>
-                        <label for="interest" class="block text-gray-700 font-medium mb-2">Minat Utama</label>
-                        <select id="interest" name="interest" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-fun-purple focus:border-fun-purple">
-                            <option value="">Pilih yang paling deket</option>
-                            <option value="web-dev">Web Development</option>
-                            <option value="mobile-dev">Mobile Development</option>
-                            <option value="ai-ml">AI/ML</option>
-                            <option value="ui-ux">UI/UX Design</option>
-                            <option value="data-science">Data Science</option>
-                            <option value="other">Lainnya</option>
-                        </select>
+                    
+                    <a href="https://docs.google.com/forms/d/19fbh4y5rpUbUiblw_p9eJ_UQepxHufmksXRlQWZwi6U/viewform?usp=sf_link" 
+                       target="_blank"
+                       class="px-8 py-4 bg-gradient-to-r from-fun-purple to-fun-pink text-white font-bold rounded-xl transition duration-300 transform hover:scale-105 hover:shadow-lg mb-4">
+                        <i class="fas fa-paper-plane mr-2"></i> Isi Form Pendaftaran
+                    </a>
+                    
+                    <div class="text-center text-sm text-gray-500 mt-4">
+                        <p>Setelah submit form, kamu akan menerima konfirmasi via email</p>
+                        <p class="mt-2">Tidak bisa mengakses form? <a href="mailto:contact@codeday.id" class="text-fun-purple underline">Hubungi kami</a></p>
                     </div>
                 </div>
-                
-                <div class="mb-6">
-                    <label class="block text-gray-700 font-medium mb-2">Pertanyaan buat pembicara (opsional)</label>
-                    <textarea name="questions" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-fun-purple focus:border-fun-purple placeholder-gray-400" placeholder="Apa aja yang pengen lo tanyain ke pembicara..."></textarea>
-                </div>
-                
-                <div class="flex items-start mb-6">
-                    <input type="checkbox" id="consent" name="consent" required class="mt-1 mr-2 rounded focus:ring-fun-purple text-fun-purple">
-                    <label for="consent" class="text-gray-700">Saya setuju dapat email reminder dan info event selanjutnya. Tenang, kita gak bakal spam!</label>
-                </div>
-                
-                <button type="submit" class="w-full bg-gradient-to-r from-fun-purple to-fun-pink text-white font-bold py-4 px-6 rounded-xl transition duration-300 transform hover:scale-105 hover:shadow-lg">
-                    <i class="fas fa-paper-plane mr-2"></i> Daftar Sekarang!
-                </button>
-                
-                <p class="text-center text-gray-500 text-sm mt-4">Gak perlu bayar, cukup bawa semangat!</p>
-            </form>
+            </div>
         </div>
     </section>
-
     <!-- FAQ -->
     <section class="py-16 px-4 bg-white">
         <div class="container mx-auto max-w-4xl">
